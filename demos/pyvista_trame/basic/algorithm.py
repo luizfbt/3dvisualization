@@ -13,6 +13,8 @@ from pyvista.trame.ui import plotter_ui
 
 pv.OFF_SCREEN = True
 
+# linha escrita para teste 
+
 server = get_server(client_type='vue3')
 state, ctrl = server.state, server.controller
 
