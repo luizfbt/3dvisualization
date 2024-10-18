@@ -14,3 +14,5 @@ call pip install --upgrade trame-vuetify
 call pip install --upgrade pyvista
 call pip install --upgrade pyntcloud
 call pip install --upgrade sympy
+call pip install --upgrade trimesh
+call pip install --upgrade imageio
