@@ -1,6 +1,8 @@
 import os
+import pdb
 import subprocess
 import flet as ft
+import time
 
 """This script provides an interface for the user to select the desired demo.
 Uses the Flet library from Python, https://flet.dev/.
@@ -21,6 +23,7 @@ class App:
         self.page.title = "3D Visualization Script Explorer"
         self.page.scroll = ft.ScrollMode.AUTO
         self.actual_path = demos_path
+        self.can_execute = True
         self.update_page()
 
 
@@ -83,8 +86,11 @@ class App:
         return items
 
 
-    def on_item_click(self, e, path):
+    def on_item_click(self, e: ft.ControlEvent, path: str):
         """Callback when an item (folder or file) is clicked."""
+        if not self.can_execute:
+            return
+        
         if os.path.isdir(path):
             # Refreshes the view to the contents of the folder
             self.actual_path = path
@@ -93,11 +99,24 @@ class App:
         elif path.endswith(".py"):
             # Run the Python script
             try:
+                self.change_container_bgcolor(e.control)
                 subprocess.run([python_file, path], check=True)
             except Exception as e:
                 print(f"Error when running the script: {e}")
+            
         elif path.endswith(".rst") or path.endswith(".txt"):
             self.show_doc(path)
+
+    
+    def change_container_bgcolor(self, control: ft.Container):
+        self.can_execute = False
+        control.border=ft.border.all(5, ft.colors.GREEN)
+        control.update()
+        time.sleep(2.0)
+        control.border = None
+        control.update()
+        self.can_execute = True
+
 
 
     def update_page(self):
