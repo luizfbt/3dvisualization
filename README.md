@@ -3,7 +3,7 @@ Tests for Python packages used for 3D visualization
 
 ## Development Environment Installation
 
-1. Install Python from the [official website](https://www.python.org/)
+1. Install **Python 3.11** (must be 3.11, for *open3d* package) from the [official website](https://www.python.org/)
 2. From VS Code, inside the project, enter the terminal prompt.
 3. Create the `venv` virtual environment:
     ```

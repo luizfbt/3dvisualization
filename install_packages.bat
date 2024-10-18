@@ -16,3 +16,4 @@ call pip install --upgrade pyntcloud
 call pip install --upgrade sympy
 call pip install --upgrade trimesh
 call pip install --upgrade imageio
+call pip install --upgrade open3d
