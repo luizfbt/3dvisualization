@@ -165,3 +165,7 @@ cython_debug/
 *.gif
 *.mp4
 myscreenshot.png
+demos/test_data/depth/*.png
+demos/test_data/image/*.png
+test.jpg
+test.json
