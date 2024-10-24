@@ -25,6 +25,11 @@ Tests for Python packages used for 3D visualization
 * [pyvista/pyvista: 3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)](https://github.com/pyvista/pyvista)
 * [pyvista/pyvista-tutorial: PyVista SciPy 2022-2024 Tutorial](https://github.com/pyvista/pyvista-tutorial)
 
+## Open3D
+
+* [Open3D – A Modern Library for 3D Data Processing](https://www.open3d.org/)
+* []()
+
 ## pyntcloud
 * [daavoo/pyntcloud: pyntcloud is a Python library for working with 3D point clouds.](https://github.com/daavoo/pyntcloud)
 
@@ -32,6 +37,7 @@ Tests for Python packages used for 3D visualization
 * &#x1F5C1; **pyvista_examples**: [pyvista/examples at main · pyvista/pyvista](https://github.com/pyvista/pyvista/tree/main/examples)
 * &#x1F5C1; **pyvista_trame**: [pyvista/examples_trame at main · pyvista/pyvista](https://github.com/pyvista/pyvista/tree/main/examples_trame)
 * &#x1F5C1; **pyvista_tutorial**: [pyvista-tutorial/tutorial at main · pyvista/pyvista-tutorial](https://github.com/pyvista/pyvista-tutorial/tree/main/tutorial)
+* &#x1F5C1; **open3d**: [Open3D/examples/python at main · isl-org/Open3D](https://github.com/isl-org/Open3D/tree/main/examples/python)
 
 ## To run the main script
 ```
