@@ -1,6 +1,6 @@
 call python.exe -m pip install --upgrade pip
 call pip install --upgrade setuptools wheel
-call pip install --upgrade numpy
+call pip install --upgrade numpy==1.24.0
 call pip install --upgrade pandas
 call pip install --upgrade jupyterlab
 call pip install --upgrade pprintpp
