@@ -11,8 +11,9 @@ For information on installation dependencies, see README.md."""
 this_path = os.path.abspath(os.path.dirname(__file__))
 demos_path = os.path.join(this_path, 'demos')
 python_folder = os.path.join(this_path, 'venv', 'Scripts')
-python_file = os.path.join(python_folder, 'python.exe')
-if not os.path.exists(python_file):
+python_exe = os.path.join(python_folder, 'python.exe')
+jupyterlab_exe = os.path.join(python_folder, 'jupyter-lab.exe')
+if not os.path.exists(python_exe):
     print(f"The 'python.exe' file not found at: {python_folder}")
     exit(1)
 
@@ -96,15 +97,24 @@ class App:
             self.actual_path = path
             self.page.controls.pop()
             self.update_page()
+        
         elif path.endswith(".py"):
             # Run the Python script
             try:
                 self.change_container_bgcolor(e.control)
-                subprocess.run([python_file, path], check=True)
+                subprocess.run([python_exe, path], check=True)
             except Exception as e:
                 print(f"Error when running the script: {e}")
+        
+        elif path.endswith(".ipynb"):
+            # Run the Jupyter Lab and opens the script
+            try:
+                self.change_container_bgcolor(e.control)
+                subprocess.run([jupyterlab_exe, path], check=True)
+            except Exception as e:
+                print(f"Error when running the Jupyter Lab: {e}")
             
-        elif path.endswith(".rst") or path.endswith(".txt"):
+        elif path.endswith(".md") or path.endswith(".rst") or path.endswith(".txt"):
             self.show_doc(path)
 
     
