@@ -7,7 +7,7 @@ Tests for Python packages used for 3D visualization
 2. From VS Code, inside the project, enter the terminal prompt.
 3. Create the `venv` virtual environment:
     ```
-    C:\Python311\python.exe -m venv venv
+    py -3.11 -m venv venv
     ```
 4. Activate the created environment:
     ```
